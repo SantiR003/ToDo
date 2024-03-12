@@ -53,22 +53,35 @@ export const Home = () => {
 
   return (
     <>
-    <div className="container-principal">
-      <h1 className="titulo">Lista de Tareas</h1>
- 
-    <div className="container">
-      <div className="container-elementos">
-        <div className="form">
-          <FormularioTareas controladorAgregar={controladorAgregarTarea} controladorActualizar={actualizarTarea} tareas={tareas}/>
+      <div className="container-principal">
+        <h1 className="titulo">Lista de Tareas</h1>
+
+
+        <div className="container">
+          <div className="container-elementos">
+
+            <div className="form">
+              <FormularioTareas controladorAgregar={controladorAgregarTarea} controladorActualizar={actualizarTarea} tareas={tareas} />
+            </div>
+
+            <div className="col-md-12">
+              {tareas.length !== 0 ? (
+                <Tabla tareas={tareas} controladorEliminar={controladorEliminar} controladorActualizar={ActualizarTarea} />
+              )
+                :
+                (
+                  <div className="texto-sinTareas">
+                    <p>Todavia no hay tareas, prueba en agregar una.</p>
+                    <img className="imagen" src="src\img\lista-de-tareas-ilustracion.png" alt="" />
+                  </div>
+                )
+              }
+            </div>
+
+          </div>
         </div>
 
-        <div className="col-md-12">
-          <Tabla tareas={tareas} controladorEliminar={controladorEliminar} controladorActualizar={ActualizarTarea}/>
-        </div>
       </div>
-
-    </div>
-    </div>
     </>
   )
 }

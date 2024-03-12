@@ -52,5 +52,15 @@ tr{
     font-family: "Kalam", cursive;
 }
 
+.texto-sinTareas{
+    font-family: "Kalam", cursive;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.imagen{
+   width: 300px;
+}
+
 
 
