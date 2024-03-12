@@ -11,7 +11,7 @@ import jakarta.persistence.Table;
 public class Tarea {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
 
     private String descripcion;
 
@@ -23,11 +23,11 @@ public class Tarea {
     }
 
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getDescripcion() {
@@ -40,7 +40,7 @@ public class Tarea {
 
     @Override
     public String toString() {
-        return "Tarea [Id=" + Id + ", descripcion=" + descripcion + "]";
+        return "Tarea [Id=" + id + ", descripcion=" + descripcion + "]";
     }
 
 }
